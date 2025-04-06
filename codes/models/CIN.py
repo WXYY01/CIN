@@ -75,7 +75,7 @@ class CINBasic(nn.Module):
         return img_fake, msg_fake_1, msg_fake_2, msg_nsm
 
     def test_decoder(self, noised_img, pre_noise):
-        if pre_noise == 1:
+        if pre_noise == 0:
             # decoder1
             msg_fake_1 = None
             img_fake = torch.zeros_like(noised_img).cuda()
